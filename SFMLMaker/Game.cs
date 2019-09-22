@@ -11,7 +11,7 @@ namespace SFMLMaker
     {
         internal void Inputs()
         {
-            //
+            //allo
             throw new NotImplementedException();
         }
 
