@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{976A0A69-F4A7-4DAA-90C8-E2D244BAA33F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SFMLMaker</RootNamespace>
-    <AssemblyName>SFMLMaker</AssemblyName>
+    <RootNamespace>SpaceInvaders</RootNamespace>
+    <AssemblyName>SpaceInvaders</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -59,15 +59,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Character.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="Missile.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Actors\Character.cs" />
+    <Compile Include="Actors\Drawable.cs" />
+    <Compile Include="Actors\Enemy.cs" />
+    <Compile Include="Actors\EnemyMap.cs" />
+    <Compile Include="Actors\NoEnemy.cs" />
+    <Compile Include="Actors\NoMissile.cs" />
+    <Compile Include="Actors\NoPlayer.cs" />
+    <Compile Include="Actors\Player.cs" />
+    <Compile Include="Actors\Updatable.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\InputHandler.cs" />
+    <Compile Include="Game Loop\Game.cs" />
+    <Compile Include="Actors\Missile.cs" />
+    <Compile Include="Game Loop\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Unit.cs" />
+    <Compile Include="Actors\Unit.cs" />
+    <Compile Include="Utils\CollisionDetection.cs" />
+    <Compile Include="Utils\Finder.cs" />
+    <Compile Include="Utils\Screen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Content Include="Resources\Actors\Missile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Actors\Player.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rest\Minecraftia-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="csfml-audio-2.dll">
@@ -88,6 +110,16 @@
     <Content Include="OpenTK.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Actors\bloxplacefllor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Actors\Enemy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Actors\NoPlayer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
