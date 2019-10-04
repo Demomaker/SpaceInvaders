@@ -11,9 +11,11 @@ namespace SpaceInvaders.Actors
 {
     public class Player : Character
     {
+        public bool PlayerDied => false;
+
         public Player() : base()
         {
-            texture = Finder.Game.playerTexture;
+            texture = Assets.PlayerTexture;
             UpdateTexture();
             Position = new SFML.System.Vector2f(Constants.World.PLAYER_START_POSITION_X, Constants.World.PLAYER_START_POSITION_Y);
         }
@@ -22,7 +24,7 @@ namespace SpaceInvaders.Actors
         public override void Die()
         {
             base.Die();
-            Finder.Player = new NoPlayer();
+            Finder.Player = NullPlayer.Instance;
             Finder.Player.Position = this.Position;
             Drawables.Remove(this);
         }

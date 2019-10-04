@@ -18,7 +18,7 @@ namespace SpaceInvaders
         private float direction = 1;
         public Missile() : base()
         {
-            texture = Finder.Game.missileTexture;
+            texture = Assets.MissileTexture;
             UpdateTexture();
         }
         

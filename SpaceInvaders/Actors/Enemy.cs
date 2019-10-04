@@ -20,7 +20,7 @@ namespace SpaceInvaders.Actors
 
         public Enemy() : base()
         {
-            texture = Finder.Game.enemyTexture;
+            texture = Assets.EnemyTexture;
             UpdateTexture();
             this.AddEnemyToMap();
         }

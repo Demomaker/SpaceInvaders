@@ -55,6 +55,7 @@ namespace SpaceInvaders.Common
             public const int HIGHSCORE_POSITION_X = Window.WINDOW_WIDTH - 200;
             public const int HIGHSCORE_POSITION_Y = 0;
             public const int STARTING_MILLISECOND_DIFFERENCE_BEFORE_ENEMY_MOVES = 200;
+            public const int NUMBER_OF_MILLISECONDS_BEFORE_SPEED_CHANGE = 900;
         }
 
         public static class Resources

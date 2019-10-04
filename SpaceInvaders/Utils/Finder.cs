@@ -22,8 +22,33 @@ namespace SpaceInvaders.Utils
         private static Game game = new Game();
         public static Game Game { get { return game;  } set { game = value; } }
 
-        public static int Score = 0;
-        public static int Highscore = 0;
+        private static int score = 0;
+        private static int highscore = 0;
+
+        public static int Score
+        {
+            get
+            {
+                return score;
+            }
+            set
+            {
+                score = value;
+                Game.OnScoreChange();
+            }
+        }
+        public static int Highscore
+        {
+            get
+            {
+                return highscore;
+            }
+            set
+            {
+                highscore = value;
+                Game.OnHighScoreChange();
+            }
+        }
         public static int TimeInMillisecondsBeforeEnemyMoves = Constants.World.STARTING_MILLISECOND_DIFFERENCE_BEFORE_ENEMY_MOVES;
 
         public static CollisionDetection CollisionDetecter = new CollisionDetection();

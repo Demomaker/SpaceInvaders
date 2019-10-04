@@ -65,7 +65,7 @@
     <Compile Include="Actors\EnemyMap.cs" />
     <Compile Include="Actors\NoEnemy.cs" />
     <Compile Include="Actors\NoMissile.cs" />
-    <Compile Include="Actors\NoPlayer.cs" />
+    <Compile Include="Actors\NullPlayer.cs" />
     <Compile Include="Actors\Player.cs" />
     <Compile Include="Actors\Updatable.cs" />
     <Compile Include="Common\Constants.cs" />
@@ -75,6 +75,7 @@
     <Compile Include="Game Loop\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Actors\Unit.cs" />
+    <Compile Include="Utils\Assets.cs" />
     <Compile Include="Utils\CollisionDetection.cs" />
     <Compile Include="Utils\Finder.cs" />
     <Compile Include="Utils\Screen.cs" />
